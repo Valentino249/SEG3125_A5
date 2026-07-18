@@ -1,5 +1,7 @@
 import { ResponsiveContainer, LineChart, XAxis, YAxis, Tooltip, Legend, Line, BarChart, CartesianGrid, Bar } from "recharts";
 import { useState } from "react";
+import {useTranslation} from 'react-i18next'
+import'../i18n'
 
 interface HeroProps {
   onNavigate: (page: string) => void;
