@@ -11,8 +11,7 @@ function App() {
   const [currentPage, setCurrentPage] = useState("home");
 
   return (
-    <div className="flex flex-col items-center">
-
+    <div className="flex flex-col items-center ">
       <Header onNavigate={setCurrentPage} />
       <Body onNavigate={setCurrentPage}/>
 
