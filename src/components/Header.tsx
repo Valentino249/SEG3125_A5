@@ -1,12 +1,9 @@
 import {useTranslation} from 'react-i18next'
 import'../i18n'
 
-interface HeaderProps {
-  onNavigate: (page: string) => void;
-}
 
 
-const Header = ({ onNavigate }: HeaderProps) => {
+const Header = () => {
 
     const {t, i18n} = useTranslation()
     const handleLanguageChange = (e:any) => {
@@ -18,8 +15,8 @@ const Header = ({ onNavigate }: HeaderProps) => {
       <nav className="flex flex-col md:flex-row items-center gap-4 md:gap-10">
         <p className="text-2xl">{t('title')}</p>
         <select id="lang-select" onChange={handleLanguageChange} className="header ml-auto">
-            <option value="en">English</option>
-            <option value="jp">日本語</option>
+            <option className="text-black" value="en">English</option>
+            <option className="text-black" value="jp">日本語</option>
         </select>
 
 

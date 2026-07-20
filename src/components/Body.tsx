@@ -3,14 +3,11 @@ import { useState } from "react";
 import {useTranslation} from 'react-i18next'
 import'../i18n'
 
-interface HeroProps {
-  onNavigate: (page: string) => void;
-}
 
 
 
-function Body({ onNavigate }: HeroProps) {
-    const {t, i18n} = useTranslation()
+function Body() {
+    const {t} = useTranslation()
 
     const data_stewing = [
         { month: t('jan'), value: 22.79},
@@ -79,10 +76,8 @@ const data_may = [
 ]
 
     const [dataSelection, setDataSelection] = useState(data_stewing);
-    const [dataName, setDataName] = useState("Stewing")
 
     const [data2Selection, setData2Selection] = useState(data_jan);
-    const [dataMonth, setDataMonth] = useState(t('jan'))
 
     const handleSubmit = (e:any) => {
         console.log(e)
@@ -90,22 +85,18 @@ const data_may = [
         case "stewing":
             console.log("1")
             setDataSelection(data_stewing)
-            setDataName("Stewing")
             break;
         case "striploin":
             console.log("2")
             setDataSelection(data_striploin)
-            setDataName("Striploin")
             break;
         case "top sirloin":
             console.log("3")
             setDataSelection(data_top_sirloin)
-            setDataName("Top Sirloin")
             break;
         case "rib":
             console.log("4")
             setDataSelection(data_rib)
-            setDataName("Rib")
             break;
       }
    
@@ -116,35 +107,30 @@ const data_may = [
         case "jan":
             console.log("1")
             setData2Selection(data_jan)
-            setDataMonth(t('jan'))
             break;
         case "feb":
             console.log("2")
             setData2Selection(data_feb)
-            setDataMonth(t('feb'))
             break;
         case t('mar'):
             console.log("3")
             setData2Selection(data_mar)
-            setDataMonth(t('mar'))
             break;
         case t('apr'):
             console.log("4")
             setData2Selection(data_april)
-            setDataMonth(t('apr'))
             break;
         case t('may'):
             console.log("5")
             setData2Selection(data_may)
-            setDataMonth(t('may'))
             break;
       }
     }
     return (
         <div>
-            <div className="relative h-full">
+            <div className="relative h-full lg:h-screen">
 
-                <div className="mt-5 mb-5 grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 gap-5">
+                <div className="mt-5 mb-5 grid grid-cols-1 lg:grid-cols-2 gap-5">
                     <div className="flex flex-col">
                         <p className="text-xl mb-4">{t('data_1_title')}</p>
                         <ResponsiveContainer width={600} height={600}>
