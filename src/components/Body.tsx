@@ -143,7 +143,7 @@ const data_may = [
                             </LineChart>
                         </ResponsiveContainer>
                         
-                        <select className="text-center" name="options" id="options" onChange={e => handleSubmit(e.target.value)}>
+                        <select className="text-center bg-blue-100" name="options" id="options" onChange={e => handleSubmit(e.target.value)}>
                             <option value="stewing">{t('stewing')}</option>
                             <option value="striploin">{t('striploin')}</option>
                             <option value="top sirloin">{t('top_sirloin')}</option>
@@ -178,7 +178,7 @@ const data_may = [
                             </BarChart>
                         </ResponsiveContainer>
 
-                        <select className="text-center" name="options2" id="options" onChange={e => handleSubmit2(e.target.value)}>
+                        <select className="text-center bg-blue-100" name="options2" id="options" onChange={e => handleSubmit2(e.target.value)}>
                             <option value="jan">{t('jan')}</option>
                             <option value="feb">{t('feb')}</option>
                             <option value="mar">{t('mar')}</option>

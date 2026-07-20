@@ -1,5 +1,4 @@
 
-import Footer from "./components/Footer.tsx";
 import Header from "./components/Header.tsx";
 import Body from "./components/Body.tsx";
 
@@ -13,7 +12,6 @@ function App() {
       <Header />
       <Body/>
 
-      <Footer  />
     </div>
   );
 }
